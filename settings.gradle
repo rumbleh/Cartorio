@@ -1,0 +1,2 @@
+rootProject.name = "Cartorio"
+include ':app'
