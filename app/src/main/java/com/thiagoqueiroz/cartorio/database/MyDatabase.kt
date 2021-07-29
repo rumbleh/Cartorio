@@ -5,8 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Certidao::class], version = 1)
-
+@Database(entities = [Certidao::class], version = 2)
 abstract class MyDatabase : RoomDatabase() {
     abstract fun certidaoDao() : CertidaoDAO
 }
@@ -18,5 +17,6 @@ object MyDB {
             MyDatabase::class.java,
             "dados"
         ).allowMainThreadQueries()
+         .fallbackToDestructiveMigration()
          .build()
 }

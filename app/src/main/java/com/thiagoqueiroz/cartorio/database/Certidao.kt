@@ -10,8 +10,6 @@ data class Certidao(
     @ColumnInfo(name = "nome") val nome : String,
     @ColumnInfo(name = "mae") val mae : String,
     @ColumnInfo(name = "pai") val pai : String,
-    @ColumnInfo(name = "nascimento") val nascimento : String,
-    @ColumnInfo(name = "livro") val livro : Int,
-    @ColumnInfo(name = "folha") val folha : Int,
-    @ColumnInfo(name = "termo") val termo : Int
+    @ColumnInfo(name = "data") val data : String,
+    @ColumnInfo(name = "sexo") val sexo : String
 )
