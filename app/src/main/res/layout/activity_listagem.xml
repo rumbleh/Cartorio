@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.listacertidao.ListagemActivity"
-    android:padding="20dp">
+    tools:context=".ui.listacertidao.ListagemActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNovo"
@@ -15,6 +14,7 @@
         android:layout_marginBottom="20dp"
         android:elevation="2dp"
         android:src="@drawable/plus"
+        android:contentDescription="Cria nova certidão"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 

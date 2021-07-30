@@ -14,7 +14,7 @@ class CadastroActivity : AppCompatActivity() {
 
         title = "Cadastro de Certidão"
 
-        var edtNome : EditText = findViewById(R.id.edtNome)
+        val edtNome : EditText = findViewById(R.id.edtNome)
         val edtMae : EditText = findViewById(R.id.edtMae)
         val edtPai : EditText = findViewById(R.id.edtPai)
         val edtData : EditText = findViewById(R.id.edtData)
@@ -23,7 +23,7 @@ class CadastroActivity : AppCompatActivity() {
         val btnSalvar : Button = findViewById(R.id.btnSalvar)
         btnSalvar.setOnClickListener {
 
-            val sexo: Int = rdgSexo!!.checkedRadioButtonId
+            val sexo: Int = rdgSexo.checkedRadioButtonId
             val rbSexo : RadioButton = findViewById(sexo)
             val index: Int = rdgSexo.indexOfChild(rbSexo)
             val charSexo : String
@@ -34,7 +34,7 @@ class CadastroActivity : AppCompatActivity() {
                 charSexo = "F"
             }
 
-            var certidao = Certidao(
+            val certidao = Certidao(
                 0,
                 edtNome.text.toString(),
                 edtMae.text.toString(),
@@ -47,8 +47,7 @@ class CadastroActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,
                 "Certidão incluída com sucesso",
                 Toast.LENGTH_SHORT).show()
-
-
+            onBackPressed()
         }
 
     }

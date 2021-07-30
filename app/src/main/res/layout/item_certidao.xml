@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="10dp"
+    android:clickable="true"
+    android:focusable="true"
     android:background="?android:attr/selectableItemBackground"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -12,6 +14,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvNome"
         tools:text="José Bortolazzi"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
@@ -21,8 +25,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvNascimento"
         android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         tools:text="25/01/1942"
         app:layout_constraintTop_toBottomOf="@id/tvNome"
         app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvSexo"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="M"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
