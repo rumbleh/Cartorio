@@ -45,26 +45,30 @@ class VisualizacaoActivity : AppCompatActivity() {
             builder.setMessage("Tem certeza?")
 
             builder.setPositiveButton(
-                "SIM",
-                { dialog, which -> // Do nothing but close the dialog
+                "SIM"
+            ) { dialog, which -> // Do nothing but close the dialog
 
-                    MyDB.getInstance(this).certidaoDao().deleteCertidao(certidao)
-                    Toast.makeText(applicationContext,
-                        "Certidão excluída com sucesso",
-                        Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                    onBackPressed()
+                MyDB.getInstance(this).certidaoDao().deleteCertidao(certidao)
+                Toast.makeText(
+                    applicationContext,
+                    "Certidão excluída com sucesso",
+                    Toast.LENGTH_SHORT
+                ).show()
+                dialog.dismiss()
+                onBackPressed()
 
-                })
+            }
 
             builder.setNegativeButton(
-                "NÃO",
-                { dialog, which -> // Do nothing
-                    Toast.makeText(applicationContext,
-                        "Exclusão cancelada",
-                        Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                })
+                "NÃO"
+            ) { dialog, which -> // Do nothing
+                Toast.makeText(
+                    applicationContext,
+                    "Exclusão cancelada",
+                    Toast.LENGTH_SHORT
+                ).show()
+                dialog.dismiss()
+            }
 
             val alert: AlertDialog = builder.create()
             alert.show()
