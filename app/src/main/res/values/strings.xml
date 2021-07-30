@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Cartorio</string>
+    <string name="nome">Nome</string>
+    <string name="mae">Mãe</string>
+    <string name="pai">Pai</string>
+    <string name="data">Data</string>
+    <string name="informe_o_sexo">Informe o sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="excluir_certidao">Excluir certidão</string>
+    <string name="atualizar_certidao">Atualizar certidão</string>
 </resources>
